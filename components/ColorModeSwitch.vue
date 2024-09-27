@@ -1,10 +1,12 @@
 <template>
-  <button>
-    
+  <button class="absolute bottom-4 right-4" @click="toggleColorMode()" v-auto-animate>
+    <component :is="colorMode.value === 'dark' ? SunMedium : Moon" />
   </button>
 </template>
 
 <script lang="ts" setup>
+import { SunMedium, Moon } from "lucide-vue-next";
+
 const colorMode = useColorMode();
 
 const toggleColorMode = () => {
