@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="text-neutral dark:text-neutral-dark bg-primary dark:bg-pimary-dark transition-colors duration-300 relative"
-  >
-    <Hero />
+  <div class="md:mx-auto">
+    <Hero class="mb-14"/>
     <ColorModeSwitch />
   </div>
 </template>

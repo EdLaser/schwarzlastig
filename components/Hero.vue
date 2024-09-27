@@ -1,34 +1,36 @@
 <template>
-    <div class="h-screen w-full overflow-hidden">
-      <div class="flex items-center justify-between h-full">
-        <div class="max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h1
-            class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
-          >
-            Schwarzlastig.
-          </h1>
-          <p class="text-xl sm:text-2xl mb-8 sm:mb-10">
-            Unvail into darkness
-          </p>
-          <ul class="text-lg sm:text-xl mb-8 sm:mb-10 flex gap-3">
-            <li>
-              <span>Dedicated.</span>
-            </li>
-            <li>
-              <span>Dark.</span>
-            </li>
-            <li>
-              <span>Dystopic.</span>
-            </li>
-          </ul>
-        </div>
-        <h2 class="md:text-9xl">
-          Coming soon.
-        </h2>
-      </div>
+  <div
+    class="min-h-screen w-full p-4 flex flex-col md:flex-row items-center justify-between"
+  >
+    <div class="max-w-4xl px-4 sm:px-6 lg:px-8 mt-10">
+      <h1
+        class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-20 sm:mb-6 text-center md:text-start"
+      >
+        𝖘𝖈𝖍𝖜𝖆𝖗𝖟𝖑𝖆𝖘𝖙𝖎𝖌
+      </h1>
+      <p
+        class="text-xl text-center md:text-start sm:text-2xl md:mb-8 text-neutral/90 dark:text-neutral-dark/90"
+      >
+        Unvail into darkness
+      </p>
+      <ul
+        class="text-sm sm:text-xl mb-8 sm:mb-10 text-center md:text-start flex justify-between gap-3 text-neutral/80 dark:text-neutral-dark/80"
+      >
+        <li
+          v-for="word in keywords"
+          class="underline underline-offset-2 hover:blur-sm duration-1000"
+        >
+          {{ word }}
+        </li>
+      </ul>
     </div>
-  </template>
-  
-  <script setup>
-  </script>
-  
+    <ImageCard
+      src="/artwork/scarab.png"
+      alt="Scarabeus"
+      right
+    />
+  </div>
+</template>
+<script setup>
+const keywords = ["Dedicated", "Dark", "Dystopic"];
+</script>
