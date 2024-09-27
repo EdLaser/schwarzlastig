@@ -3,6 +3,8 @@
     class="flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]"
     @mouseenter="onMouseMove()"
     @mousemove="onMouseMove()"
+    @touchstart="onMouseMove()"
+    @touchmove="onMouseMove()"
   >
     <div
       class="p-0.5 bg-transparent aspect-square flex items-center justify-center w-full h-full relative"
@@ -12,10 +14,10 @@
       >
         <div class="pointer-events-none">
           <div
-            class="absolute inset-0 rounded-2xl opacity-0 group-hover/card:opacity-100"
+            class="absolute inset-0 rounded-2xl opacity-0 group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
           >
             <p
-              class="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-neutral dark:text-neutral-dark font-bold transition duration-500"
+              class="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-neutral dark:text-neutral-dark font-bold"
             >
               {{ randomString }}
             </p>
@@ -53,7 +55,6 @@ const imageSrc = computed(() => {
 const randomString = ref("");
 
 const onMouseMove = () => {
-  console.log("moved");
   const str = generateRandomString(1500);
   randomString.value = str;
 };

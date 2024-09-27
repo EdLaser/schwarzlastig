@@ -28,6 +28,7 @@
       src="/artwork/scarab.png"
       alt="Scarabeus"
       right
+      class="mb-10"
     />
   </div>
 </template>
