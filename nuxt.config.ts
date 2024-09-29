@@ -13,5 +13,6 @@ export default defineNuxtConfig({
     "@formkit/auto-animate/nuxt",
     "@vueuse/nuxt",
     "@nuxt/image",
+    "@nuxtjs/i18n",
   ],
 });

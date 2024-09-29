@@ -10,7 +10,7 @@
     <span
       class="text-neutral/60 dark:text-neutral-dark/60 italic font-semibold absolute bottom-0 right-0"
       :class="right ? 'text-end' : 'text-start'"
-      >{{ src }}</span
+      >{{ src }}.png</span
     >
   </div>
 </template>
