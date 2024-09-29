@@ -7,9 +7,11 @@
       :src="imageSrc"
       :alt="alt"
     />
-    <span class="text-neutral/60 dark:text-neutral-dark/60 italic font-semibold absolute bottom-0 right-0" :class="right ? 'text-end' : 'text-start'">{{
-      src
-    }}</span>
+    <span
+      class="text-neutral/60 dark:text-neutral-dark/60 italic font-semibold absolute bottom-0 right-0"
+      :class="right ? 'text-end' : 'text-start'"
+      >{{ src }}</span
+    >
   </div>
 </template>
 
@@ -28,9 +30,7 @@ const props = defineProps<{
 const colorMode = useColorMode();
 
 const imageSrc = computed(() => {
-  return colorMode.value === "dark"
-    ? props.src.replace(".png", "-dark.png")
-    : props.src;
+  return `${props.src}${colorMode.value === "dark" ? "-dark" : ""}.png`;
 });
 </script>
 

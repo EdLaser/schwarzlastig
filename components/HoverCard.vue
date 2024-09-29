@@ -47,9 +47,7 @@ const props = defineProps<{
 const colorMode = useColorMode();
 
 const imageSrc = computed(() => {
-  return colorMode.value === "dark"
-    ? props.src.replace(".png", "-dark.png")
-    : props.src;
+  return `${props.src}${colorMode.value === "dark" ? "-dark" : ""}.png`;
 });
 
 const randomString = ref("");

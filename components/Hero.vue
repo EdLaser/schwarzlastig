@@ -25,7 +25,7 @@
       </ul>
     </div>
     <ImageCard
-      src="/artwork/scarab.png"
+      src="/artwork/scarab"
       alt="Scarabeus"
       right
       class="mb-10"

@@ -1,11 +1,17 @@
 <template>
-  <button class="fixed bottom-10 right-4" @click="toggleColorMode()" v-auto-animate>
-    <component :is="colorMode.value === 'dark' ? SunMedium : Moon" />
-  </button>
+  <div class="flex justify-between fixed bottom-10 w-full px-8">
+    <NuxtLink to="https://www.instagram.com/schwarzlastig/" external target="_blank">
+      <Instagram />
+    </NuxtLink>
+
+    <button class="" @click="toggleColorMode()" v-auto-animate>
+      <component :is="colorMode.value === 'dark' ? SunMedium : Moon" />
+    </button>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { SunMedium, Moon } from "lucide-vue-next";
+import { SunMedium, Moon, Instagram } from "lucide-vue-next";
 
 const colorMode = useColorMode();
 
