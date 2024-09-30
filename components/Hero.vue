@@ -24,7 +24,7 @@
         </li>
       </ul>
     </div>
-    <ImageCard src="/artwork/scarab" alt="Scarabeus" right class="mb-10" />
+    <ImageCard src="/artwork/cicada" alt="Cicada" right class="mb-10" />
   </div>
 </template>
 <script setup>

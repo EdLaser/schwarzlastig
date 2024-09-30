@@ -27,6 +27,8 @@
     <div class="grid md:grid-cols-2">
       <HoverCard src="/artwork/scarab" alt="Scarab" />
       <HoverCard src="/artwork/transformation" alt="Transformation" />
+      <HoverCard src="/artwork/papilio" alt="Papilio" />
+      <HoverCard src="/artwork/hidden-flower" alt="Hidden Flower" />
     </div>
     <ColorModeSwitch />
   </div>
