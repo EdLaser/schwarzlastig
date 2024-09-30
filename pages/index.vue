@@ -1,5 +1,21 @@
 <template>
   <div class="md:mx-auto">
+    <div
+      class="italic space-x-3 text-xs sm:text-sm md:text-base text-right p-3"
+    >
+      <button
+        :class="locale === 'en' ? 'underline' : ''"
+        @click="setLocale('en')"
+      >
+        en
+      </button>
+      <button
+        :class="locale === 'de' ? 'underline' : ''"
+        @click="setLocale('de')"
+      >
+        de
+      </button>
+    </div>
     <Hero class="mb-14" />
     <div class="flex flex-col mx-auto p-6">
       <h2
@@ -15,4 +31,8 @@
     <ColorModeSwitch />
   </div>
 </template>
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import {} from "lucide-vue-next";
+
+const { locale, setLocale } = useI18n();
+</script>

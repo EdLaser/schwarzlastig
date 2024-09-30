@@ -11,7 +11,7 @@
       <p
         class="text-xl text-center md:text-start sm:text-2xl md:mb-8 text-neutral/90 dark:text-neutral-dark/90"
       >
-        Unvail into darkness
+        {{ $t("primeHeader") }}
       </p>
       <ul
         class="text-sm sm:text-xl mb-8 sm:mb-10 text-center md:text-start flex justify-between gap-3 text-neutral/80 dark:text-neutral-dark/80"
@@ -24,12 +24,7 @@
         </li>
       </ul>
     </div>
-    <ImageCard
-      src="/artwork/scarab"
-      alt="Scarabeus"
-      right
-      class="mb-10"
-    />
+    <ImageCard src="/artwork/scarab" alt="Scarabeus" right class="mb-10" />
   </div>
 </template>
 <script setup>
